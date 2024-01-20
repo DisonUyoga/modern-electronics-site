@@ -1,7 +1,7 @@
 import { Container, Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import PriceFormat from "../priceFormat";
+import PriceFormat from "../Format
 import { priceFormating } from "../../utils/price";
 import "./productOnOffer.css";
 

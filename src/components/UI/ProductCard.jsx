@@ -7,7 +7,7 @@ import { addItem } from "../../redux/slices/cartSlice";
 import { toast } from "react-toastify";
 import "./image-style.css";
 import { getAunthentication } from "../../redux/slices/loginSlice";
-import PriceFormat from "../priceFormat";
+import PriceFormat from "../Format";
 
 const ProductCard = ({ item, checkAuth }) => {
   const dispatch = useDispatch();
