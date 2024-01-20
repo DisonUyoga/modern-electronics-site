@@ -12,15 +12,12 @@ function LimitedOffers({ productOnOffer }) {
         <Row>
           <Col lg="6" md="12" className="count__down-col">
             <div className="clock__top-content">
-              <h4 className="text-white fs-6 mb-2">
-                Limited Offers:{" "}
-                <span className="text-white text-sm">
-                  {productOnOffer.category?.title}
-                </span>
-              </h4>
-              <h3 className="text-white fs-5 mb-3">
-                {productOnOffer?.productName}
-              </h3>
+              <h4 className="text-white fs-6 mb-2">Limited Offers</h4>
+              <Link to={`/shop/${productOnOffer?.id}`}>
+                <h3 className="text-white fs-5 mb-3">
+                  {productOnOffer?.productName}
+                </h3>
+              </Link>
               <div className="d-flex flex-column align-item-center justify-content-center">
                 <div className="d-flex flex-column flex-md-row align-items-center justify-content-between">
                   <p className="text-decoration-line-through">
@@ -42,9 +39,9 @@ function LimitedOffers({ productOnOffer }) {
               <Link to="/shop">Visit Store</Link>
             </motion.button>
           </Col>
-          <Col lg="6" md="12" className="text-end counter__img">
+          {/* <Col lg="6" md="12" className="text-end counter__img">
             <img src={productOnOffer?.imgUrl} alt="" />
-          </Col>
+          </Col> */}
         </Row>
       </Container>
     </>
