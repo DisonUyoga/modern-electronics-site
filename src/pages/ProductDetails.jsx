@@ -113,26 +113,26 @@ const ProductDetails = () => {
                   <img src={imgUrl} alt="" />
                 </Col>
                 <Col lg="6">
-                  <div className="product__details p-3 d-flex flex-column flex-md-row flex-lg-row">
+                  <div className="product__details p-3 d-flex flex-column">
                     <h2>{productName}</h2>
                     
-                    <div className="product__rating d-flex align-items-center gap-5 mb-3">
-                     <div className="d-flex flex-column flex-md-row flex-lg-row">
-                      <Stars total_rating={total_rating}/>
-                      <p>
-                     (<span>{total_rating}</span>)
-                     </p>
-                     </div>
-                     
-                    </div>
+                        <div className="product__rating d-flex align-items-center gap-5 mb-3">
+                            <div className="d-flex flex-column flex-md-row flex-lg-row">
+                              <Stars total_rating={total_rating}/>
+                              <p>
+                            (<span>{total_rating}</span>)
+                            </p>
+                            </div>
+                        
+                        </div>
                     
-                    <div className='d-flex align-items-center gap-5'>
-                      <span className='product__price'>{<PriceFormat price={price}/>}</span>
-                      <span>Category: {category?.title.toUpperCase()}</span>
-                    </div>
+                        <div className='d-flex align-items-center gap-5'>
+                          <span className='product__price'>{<PriceFormat price={price}/>}</span>
+                          <span>Category: {category?.title.toUpperCase()}</span>
+                        </div>
                    
-                    <p className='mt-3'>{shortDesc}</p>
-                    <motion.button whileTap={{scale:1.1}} className="buy__btn" onClick={addToCart}>Add to Cart</motion.button>
+                          <p className='mt-3'>{shortDesc}</p>
+                          <motion.button whileTap={{scale:1.1}} className="buy__btn" onClick={addToCart}>Add to Cart</motion.button>
                   </div>
                 </Col>
                 <Col lg="12" className='mt-5'>
