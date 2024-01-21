@@ -113,7 +113,7 @@ const ProductDetails = () => {
                   <img src={imgUrl} alt="" />
                 </Col>
                 <Col lg="6">
-                  <div className="product__details p-3">
+                  <div className="product__details p-3 d-flex flex-column flex-md-row flex-lg-row">
                     <h2>{productName}</h2>
                     
                     <div className="product__rating d-flex align-items-center gap-5 mb-3">
