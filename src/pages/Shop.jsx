@@ -49,8 +49,8 @@ const Shop = () => {
       setProductsData(searchedProducts)
   }
   return <> {products.length>0 ? (
-    <div> <Helmet title.toLowerCase()='Shop'>
-      <CommonSection title.toLowerCase()={'Products'}/>
+    <div> <Helmet title='Shop'>
+      <CommonSection title={'Products'}/>
       <section>
         <Container>
           <Row>

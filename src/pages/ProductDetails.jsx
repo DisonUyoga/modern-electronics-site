@@ -113,14 +113,14 @@ const ProductDetails = () => {
                   <img src={imgUrl} alt="" />
                 </Col>
                 <Col lg="6">
-                  <div className="product__details p-3 d-flex flex-column">
+                  <div className="d-flex flex-column p-3 product__details ">
                     <h2>{productName}</h2>
                     
                         <div className="product__rating d-flex align-items-center gap-5 mb-3">
-                            <div className="d-flex flex-column flex-md-row flex-lg-row">
+                            <div className="d-flex flex-column align-items-center justify-content-center">
                               <Stars total_rating={total_rating}/>
                               <p>
-                            (<span>{total_rating}</span>)
+                            (<span>{total_rating}</span>) ratings
                             </p>
                             </div>
                         
