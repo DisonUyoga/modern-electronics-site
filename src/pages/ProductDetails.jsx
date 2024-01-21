@@ -115,11 +115,12 @@ const ProductDetails = () => {
                 <Col lg="6">
                   <div className="product__details p-3">
                     <h2>{productName}</h2>
+                    
                     <div className="product__rating d-flex align-items-center gap-5 mb-3">
                      <div className="d-flex flex-column flex-md-row flex-lg-row">
                       <Stars total_rating={total_rating}/>
                       <p>
-                     (<span>{total_rating}</span> ratings)
+                     (<span>{total_rating}</span>)
                      </p>
                      </div>
                      
