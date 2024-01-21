@@ -16,25 +16,25 @@ const Shop = () => {
   const handleFilter=e=>{
     const {value}= e.target
     if(value==="television"){
-      const filteredProducts=products?.filter(item=>item.category?.title==='television')
+      const filteredProducts=products?.filter(item=>item.category?.title.toLowerCase()==='television')
       setProductsData(filteredProducts)
     }else if(value==="cooker"){
-      const filteredProducts=products?.filter(item=>item.category?.title==='cooker')
+      const filteredProducts=products?.filter(item=>item.category?.title.toLowerCase()==='cooker')
       setProductsData(filteredProducts)
     }else if(value==='fridge'){
-      const filteredProducts=products?.filter(item=>item.category?.title==='fridge')
+      const filteredProducts=products?.filter(item=>item.category?.title.toLowerCase()==='fridge')
       setProductsData(filteredProducts)
     }else if(value==='sound bar and audio'){
-      const filteredProducts=products?.filter(item=>item.category?.title==='sound bar and audio')
+      const filteredProducts=products?.filter(item=>item.category?.title.toLowerCase()==='sound bar and audio')
       setProductsData(filteredProducts)
     }else if(value==='gaming'){
-      const filteredProducts=products?.filter(item=>item.category?.title==='gaming')
+      const filteredProducts=products?.filter(item=>item.category?.title.toLowerCase()==='gaming')
       setProductsData(filteredProducts)
     }else if(value==='offer'){
-      const filteredProducts=products?.filter(item=>item.category?.title==='offer')
+      const filteredProducts=products?.filter(item=>item.category?.title.toLowerCase()==='offer')
       setProductsData(filteredProducts)
     }else if(value==='trending'){
-      const filteredProducts=products?.filter(item=>item.category?.title==='trending')
+      const filteredProducts=products?.filter(item=>item.category?.title.toLowerCase()==='trending')
       setProductsData(filteredProducts)
     }
     else{
@@ -49,8 +49,8 @@ const Shop = () => {
       setProductsData(searchedProducts)
   }
   return <> {products.length>0 ? (
-    <div> <Helmet title='Shop'>
-      <CommonSection title={'Products'}/>
+    <div> <Helmet title.toLowerCase()='Shop'>
+      <CommonSection title.toLowerCase()={'Products'}/>
       <section>
         <Container>
           <Row>

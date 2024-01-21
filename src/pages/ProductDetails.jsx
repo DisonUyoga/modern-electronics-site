@@ -125,10 +125,12 @@ const ProductDetails = () => {
                      </div>
                      
                     </div>
+                    
                     <div className='d-flex align-items-center gap-5'>
-                    <span className='product__price'>{<PriceFormat price={price}/>}</span>
-                    <span>Category: {category?.title.toUpperCase()}</span>
+                      <span className='product__price'>{<PriceFormat price={price}/>}</span>
+                      <span>Category: {category?.title.toUpperCase()}</span>
                     </div>
+                   
                     <p className='mt-3'>{shortDesc}</p>
                     <motion.button whileTap={{scale:1.1}} className="buy__btn" onClick={addToCart}>Add to Cart</motion.button>
                   </div>
