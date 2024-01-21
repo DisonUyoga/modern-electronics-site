@@ -40,6 +40,7 @@ const ProductCard = ({ item, checkAuth }) => {
 
           <div className="product__details">
             <span className="product__name">{item.productName}</span>
+            <motion.span whileTap={{scale:1.2}}><i className="ri-add-line" onClick={addToCart}></i></motion.span>
             <PriceFormat price={item.price} />
           </div>
           <div className="d-flex align-items-center justify-content-center mt-4">

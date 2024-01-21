@@ -15,22 +15,29 @@ const Shop = () => {
   
   const handleFilter=e=>{
     const {value}= e.target
-    if(value==="sofa"){
-      const filteredProducts=products?.filter(item=>item.category?.title==='sofa')
+    if(value==="television"){
+      const filteredProducts=products?.filter(item=>item.category?.title==='television')
       setProductsData(filteredProducts)
-    }else if(value==="chair"){
-      const filteredProducts=products?.filter(item=>item.category?.title==='chair')
+    }else if(value==="cooker"){
+      const filteredProducts=products?.filter(item=>item.category?.title==='cooker')
       setProductsData(filteredProducts)
-    }else if(value==='mobile'){
-      const filteredProducts=products?.filter(item=>item.category?.title==='mobile')
+    }else if(value==='fridge'){
+      const filteredProducts=products?.filter(item=>item.category?.title==='fridge')
       setProductsData(filteredProducts)
-    }else if(value==='wireless'){
-      const filteredProducts=products?.filter(item=>item.category?.title==='wireless')
+    }else if(value==='sound bar and audio'){
+      const filteredProducts=products?.filter(item=>item.category?.title==='sound bar and audio')
       setProductsData(filteredProducts)
-    }else if(value==='watch'){
-      const filteredProducts=products?.filter(item=>item.category?.title==='watch')
+    }else if(value==='gaming'){
+      const filteredProducts=products?.filter(item=>item.category?.title==='gaming')
       setProductsData(filteredProducts)
-    }else{
+    }else if(value==='offer'){
+      const filteredProducts=products?.filter(item=>item.category?.title==='offer')
+      setProductsData(filteredProducts)
+    }else if(value==='trending'){
+      const filteredProducts=products?.filter(item=>item.category?.title==='trending')
+      setProductsData(filteredProducts)
+    }
+    else{
       setProductsData(products)
     }
   }
@@ -51,11 +58,13 @@ const Shop = () => {
                 <div className="filter__widget">
                   <select onChange={handleFilter}>
                   <option value="">Fileter By Category</option>
-                    <option value="sofa">Sofa</option>
-                    <option value="chair">Chair</option>
-                    <option value="mobile">Mobile</option>
-                    <option value="watch">Watch</option>
-                    <option value="wireless">Wireless</option>
+                    <option value="television">television</option>
+                    <option value="fridge">fridge</option>
+                    <option value="gaming">gaming</option>
+                    <option value="sound bar and audio">sound bar and audio</option>
+                    <option value="cooker">cooker</option>
+                    <option value="trending">trending</option>
+                    <option value="offer">offer</option>
                   </select>
                 </div>
             </Col>

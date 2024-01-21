@@ -16,7 +16,7 @@ import { submitReview } from '../utils/getAuth';
 import Stars from '../components/UI/Stars';
 import {getAunthentication} from '../redux/slices/loginSlice'
 import Spinner from '../components/Spinner';
-
+import PriceFormat from "../components/Format"
 const ProductDetails = () => {
   const [tab, setTab]=useState('desc')
   const [rating, setRating]= useState(0)
@@ -109,14 +109,14 @@ const ProductDetails = () => {
           <section className='pt-0'>
             <Container>
               <Row>
-                <Col lg="6">
+                <Col lg="6" className="mt-5">
                   <img src={imgUrl} alt="" />
                 </Col>
                 <Col lg="6">
-                  <div className="product__details">
+                  <div className="product__details p-3">
                     <h2>{productName}</h2>
                     <div className="product__rating d-flex align-items-center gap-5 mb-3">
-                     <div>
+                     <div className="d-flex flex-column flex-md-row flex-lg-row">
                       <Stars total_rating={total_rating}/>
                       <p>
                      (<span>{total_rating}</span> ratings)
@@ -125,7 +125,7 @@ const ProductDetails = () => {
                      
                     </div>
                     <div className='d-flex align-items-center gap-5'>
-                    <span className='product__price'>Ksh.{price}</span>
+                    <span className='product__price'>{<PriceFormat price={price}/>}</span>
                     <span>Category: {category?.title.toUpperCase()}</span>
                     </div>
                     <p className='mt-3'>{shortDesc}</p>

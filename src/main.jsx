@@ -4,10 +4,11 @@ import App from "./App.jsx";
 import { Provider } from "react-redux";
 import "remixicon/fonts/remixicon.css";
 import "bootstrap/dist/css/bootstrap.css";
-import store from "./redux/store.js";
+import {store,persistor }from "./redux/store.js";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
+import {PersistGate} from 'redux-persist/integration/react'
 
 axios.defaults.baseURL = "https://electronics233.pythonanywhere.com";
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -20,7 +21,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         pauseOnHover
         theme="dark"
       ></ToastContainer>
-      <App />
+      <PersistGate loading={null} persistor={persistor}>
+    <App />
+    </PersistGate>
     </Provider>
   </React.StrictMode>
 );

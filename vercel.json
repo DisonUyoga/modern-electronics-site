@@ -10,7 +10,7 @@
     },
     {
       "src":"/shop/:id",
-      "dest":"/shop"
+      "dest":"/"
     },
     {
       "src":"/cart",
@@ -26,6 +26,10 @@
     },
     {
       "src":"/checkout",
+      "dest":"/"
+    },
+    {
+      "src":"/contact",
       "dest":"/"
     }
   ]

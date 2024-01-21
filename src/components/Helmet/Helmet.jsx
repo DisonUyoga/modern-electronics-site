@@ -3,7 +3,7 @@ import { Container } from "reactstrap";
 
 const Helmet = (props) => {
   console.log("hello");
-  document.title = "Comfort -" + props.title;
+  document.title = "viqtech -" + props.title;
   return <>{props.children}</>;
 };
 
